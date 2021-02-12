@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,nuxt,vue,vscode,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,nuxt,vue,vscode,macos,windows
 
+# misc
+_etc
+
 ### macOS ###
 # General
 .DS_Store
