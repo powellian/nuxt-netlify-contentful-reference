@@ -1,5 +1,7 @@
 # nuxt-netlify-contentful-reference
-Reference version for a JAMStsck site - placeholder content throughout
+Reference version for a JAMStsck site - placeholder content throughout.
+
+Includes mockup of environment variables and Nuxt configuration, with relevant links in comments.
 
 ## Build Setup
 
