@@ -1,0 +1,136 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: static/img/projects
+public_folder: /img
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: shipicat
+    api_key: 737864688877625
+
+# TODO: update this on rollout
+display_url: https://sdhp-preview.netlify.app/
+
+collections:
+  # Homepage
+  - name: 'homepage'
+    label: 'Homepage'
+    folder: 'content/homepage'
+    format: 'frontmatter'
+    create: false
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Description - short, for SEO',
+          name: 'descriptionSeo',
+          widget: 'string'
+        }
+      - { label: 'Background Image', name: 'bgImage', widget: 'image' }
+      - {
+          label: 'Dark theme',
+          name: 'darkTheme',
+          widget: 'boolean',
+          default: false
+        }
+      - {
+          label: 'Caps text On/Off',
+          name: 'capsText',
+          widget: 'boolean',
+          default: false
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  # Projects Homepage
+  - name: 'projectsHome'
+    label: 'Projects Homepage'
+    folder: 'content/projects-homepage'
+    create: false
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Description - Project',
+          name: 'descriptionProject',
+          widget: 'string'
+        }
+      - {
+          label: 'Description - short, for SEO',
+          name: 'descriptionSeo',
+          widget: 'string'
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  # Project Pages
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'content/projects'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Description - Project',
+          name: 'descriptionProject',
+          widget: 'string',
+          required: false
+        }
+      - {
+          label: 'Description - short, for SEO',
+          name: 'descriptionSeo',
+          widget: 'string',
+          required: false
+        }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Gallery Images',
+          name: 'galleryImages',
+          widget: 'list',
+          summary: '{{fields.image}}',
+          field: { label: Image, name: image, widget: image },
+          create: true,
+          required: false
+        }
+      - {
+          label: 'Gallery Video',
+          name: 'galleryVideo',
+          summary: '{{fields.video}}',
+          # field: { label: Video, name: video, widget: file },
+          field: { label: Video, name: video, widget: string },
+          create: true,
+          required: false
+        }
+
+  # About
+  - name: 'about'
+    label: 'About/Contact'
+    folder: 'content/about'
+    format: 'frontmatter'
+    create: true
+    editor:
+      preview: true
+    fields:
+      - {
+          label: 'Description - short, for SEO',
+          name: 'descriptionSeo',
+          widget: 'string',
+          preview: false
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Email: personal',
+          hint: 'This is encrypted',
+          name: 'emailContact',
+          widget: 'string'
+        }
+      - { label: 'Instagram URL', name: 'instagramContact', widget: 'string' }

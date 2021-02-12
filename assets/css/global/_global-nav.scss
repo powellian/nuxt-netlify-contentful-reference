@@ -1,0 +1,84 @@
+.global-nav--outer,
+.navbar,
+.navbar-menu {
+  background: var(--black);
+  box-shadow: none;
+}
+
+.navbar {
+  .navbar-brand {
+    h1 {
+      margin: 0;
+    }
+
+    a {
+      font-size: rem-calc(20);
+    }
+
+    #homelink {
+      text-decoration: none;
+      margin-left: rem-calc(12);
+
+      @media screen and (min-width: #{$mqdesk}px) {
+        // margin-left: rem-calc(36);
+      }
+    }
+  }
+  .navbar-end {
+    a {
+      font-size: rem-calc(14);
+      font-weight: var(--font-weight-headings);
+    }
+
+    // lobotomised owl:
+    * + * {
+      margin-left: rem-calc(20);
+
+      @media screen and (min-width: #{$mqmob}px) {
+        margin-left: var(--common-size);
+        margin-right: calc(var(--common-size) / 2); // TODO: sort out this hack!
+      }
+    }
+  }
+  a {
+    color: var(--white);
+    padding: 0;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &.nuxt-link-active {
+      color: var(--white);
+      text-decoration: underline;
+    }
+  }
+}
+.global-nav {
+  &--outer {
+    width: 100%;
+    height: rem-calc(52);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  &--inner {
+    position: absolute;
+    width: 100%;
+  }
+  @media screen and (max-width: #{$mqmob}px) {
+    .navbar > .container {
+      margin: 0;
+    }
+  }
+
+  // this is a hack to counteract whatever it is the hero
+  .column {
+    padding: 0;
+
+    @media screen and (min-width: #{$mqdesk}px) {
+      margin: 0 rem-calc(-12);
+    }
+  }
+}

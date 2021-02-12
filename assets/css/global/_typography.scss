@@ -1,0 +1,63 @@
+/*
+*   Typography here
+*/
+
+body {
+  font-family: $family-primary;
+  color: var(--font-colour-common);
+  line-height: 1.6;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-weight: var(--font-weight-headings);
+  line-height: 1.2;
+  color: var(--font-colour-dark);
+  display: inherit;
+  margin-bottom: calc(var(--common-size) / 8);
+}
+
+p {
+  font-size: rem-calc($font-size-common);
+  letter-spacing: 0.005em;
+  color: var(--font-colour-common);
+  margin-top: 0;
+}
+
+a {
+  color: var(--font-colour-common);
+  border-bottom: 1px solid darken($color: $border-light, $amount: 5); // Bulma variable
+
+  &:hover,
+  &:focus {
+    color: var(--font-colour-common);
+    text-decoration: none;
+    border-bottom: none;
+  }
+}
+
+ul,
+ol,
+dl {
+  .content & {
+    // * + * {
+    margin: 0;
+    // }
+  }
+}
+
+figcaption {
+  line-height: 2;
+  font-size: rem-calc(10);
+  color: #3c3b3b;
+}

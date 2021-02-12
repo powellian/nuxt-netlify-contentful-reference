@@ -1,0 +1,21 @@
+.nuxt-content-container,
+.nuxt-content {
+  // !important because of inline v-data attr which is more specific
+  margin: 0 !important;
+}
+.nuxt-content {
+  p {
+    margin-bottom: calc(var(--common-size) / 2);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  // TODO: see if this lobotomised will work inside .nuxt-content
+  // * + * {
+  //   // p {
+  //   margin-top: 0;
+  //   // }
+  // }
+  // }
+}

@@ -1,0 +1,54 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --testcol: #0f0;
+  --common-size: 30px;
+  --font-colour-common: #3c3b3b;
+  --font-colour-dark: darken(var(--font-colour-common), 5%);
+  // NOTE: --font-family-WHATEVER and font-size-common
+  // both temp replaced by scss vars - see below:
+  --font-weight-regular: 400;
+  --font-weight-headings: 600;
+}
+
+/*
+  font-family: var(--font-family-roboto);
+  This has been replaced for a Bulma font variable in _bulma-core.scss
+*/
+
+// TODO: use scss var until I can work out how to use css var inside a scss function
+$font-size-common: 12;
+
+body {
+  // background: var(--testcol);
+}
+
+// Media queries
+$mqmap: (
+  'mob': '768',
+  'tab': '769',
+  'desk': '1024',
+  'wide': '1216',
+  'fhd': '1408'
+);
+
+$mqmob: map-get(
+  $map: $mqmap,
+  $key: 'mob'
+);
+$mqtab: map-get(
+  $map: $mqmap,
+  $key: 'tab'
+);
+$mqdesk: map-get(
+  $map: $mqmap,
+  $key: 'desk'
+);
+$mqwide: map-get(
+  $map: $mqmap,
+  $key: 'wide'
+);
+$mqfhd: map-get(
+  $map: $mqmap,
+  $key: 'fhd'
+);

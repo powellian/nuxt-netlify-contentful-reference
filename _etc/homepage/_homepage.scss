@@ -1,0 +1,11 @@
+.homepage {
+  &__copyblock {
+    margin-top: 10vh;
+
+    .dark & {
+      .content {
+        background: var(--white);
+      }
+    }
+  }
+}
