@@ -5,15 +5,10 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     bodyAttrs: {},
-    title: 'TODO: add the <title>',
+    title: 'TODO: add the <title> per page/route',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-      // {
-      //   hid: 'description',
-      //   name: 'description',
-      //   content: 'TODO: add the <description>'
-      // }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/sh-favicon.svg' },
@@ -35,7 +30,6 @@ export default {
     scss: [
       './assets/css/global/_variables.scss',
       './assets/css/util/_mixins.scss'
-      // './assets/abstracts/_mixins.scss' // use underscore "_" & also file extension ".scss"
     ]
   },
 
@@ -62,11 +56,7 @@ export default {
     [
       'nuxt-buefy',
       {
-        // materialDesignIcons: false,
-        // css: false,
-        // button: false,
-        // formControls: false,
-        // pagination: false
+        materialDesignIcons: false,
       }
     ],
     // https://cloudinary.nuxtjs.org/setup
@@ -80,11 +70,9 @@ export default {
    */
   publicRuntimeConfig: {
     baseURL:
-      process.env.NETLIFY_BASE_URL_DEV || 'https://sdhp-preview.netlify.app/'
+      process.env.NETLIFY_BASE_URL_DEV || 'https://gertchahost:12345/'
   },
-  privateRuntimeConfig: {
-    // cloudinaryUrl: process.env.CLOUDINARY_URL
-  },
+  privateRuntimeConfig: {},
 
   //https://cloudinary.nuxtjs.org/setup#configure
   cloudinary: {
