@@ -1,8 +1,0 @@
-Your authorization token:
-vscode://vscode.github-authentication/did-authenticate?windowid=1&code=fea94e2264cd06beb3eb&state=4f2180d5-2e39-4a91-ba08-358c4d363533
-✅ Copied
-
-    Copy the token.
-    Switch back to VS code.
-    Click Signing in to github.com... in the status bar.
-    Paste the token and hit enter.
