@@ -1,7 +1,9 @@
 # nuxt-netlify-contentful-reference
-Reference version for a JAMStsck site - placeholder content throughout.
+Reference version for a JAMStsck site - placeholder content throughout, not currently hosted on Netlify but thst's a quick TODO/WIP.
 
 Includes mockup of environment variables and Nuxt configuration, with relevant links in comments.
+
+Project runs locally as-per the following guide;  dependencies are up-to-date (as of writing this) - to test, run the following: `npm outdated -l`
 
 ## Build Setup
 
